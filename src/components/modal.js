@@ -55,10 +55,6 @@ export default function modal() {
     iframe.setAttribute('title', 'resume');
     iframe.innerHTML = '<p>Your browser does not support iframes.</p>';
     return iframe;
-    // const object = elClass('object', 'resume-viewer');
-    // object.setAttribute('data', file.getPdf());
-    // object.setAttribute('type', 'application/pdf');
-    // return object;
   }
 
   function docViewDropdown() {

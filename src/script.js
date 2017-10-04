@@ -1,5 +1,5 @@
 /* eslint import/first: 0 no-undef: 0 */
-
+import 'babel-polyfill';
 import toggleMenu from './components/toggleMenu';
 import modal from './components/modal';
 import file from './components/docHandler';
