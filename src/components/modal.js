@@ -51,7 +51,7 @@ export default function modal() {
 
   function modalContent() {
     const iframe = elClass('iframe', 'resume-viewer');
-    iframe.setAttribute('src', 'http://brastrullo.github.io/resume/');
+    iframe.setAttribute('src', 'https://brastrullo.github.io/resume/');
     iframe.setAttribute('title', 'resume');
     iframe.innerHTML = '<p>Your browser does not support iframes.</p>';
     return iframe;
