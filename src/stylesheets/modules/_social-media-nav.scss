@@ -1,0 +1,15 @@
+.social-media-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  .nav {
+    text-align: center;
+    display: flex;
+    margin-bottom: 1em;
+    flex-flow: column nowrap;
+    li + li {
+      padding: 0;
+      margin: 1em 0 0;
+    }
+  }
+}

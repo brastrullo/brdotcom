@@ -1,0 +1,25 @@
+@import "animate-intro";
+@import "animate-menu-buttons";
+
+.animate-downchevron {
+  animation: bounce .5s steps(4) infinite alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0px) }
+  to   { transform: translateY(-1px) }
+}
+
+.dim-ui {
+  opacity: .2;
+}
+
+.li-item {
+  transform: translateX(150px);
+  transition: transform .1s ease-in;
+}
+
+.show-menu-item {
+  transform: translateX(0);
+}

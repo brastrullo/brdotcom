@@ -1,0 +1,39 @@
+.section-home {
+  height: 100vh;
+    article {
+    margin-top: -5em;
+  }
+  .intro-name {
+    text-shadow: $text-shadow;
+    font-size: 4em;
+    margin: .25em auto 0;
+  }
+  .intro-block {
+    font-size: 1.25em;
+    margin: .25em .5em;
+    p {
+      margin: .2em 0;
+      &:nth-of-type(2) {
+        font-size: .75em;
+      }
+    }
+  }
+
+  .scrolldown {
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+.name {
+  &-bold {
+    font-weight: 500;
+  }
+  &-thin {
+    font-weight: 200;
+  }
+  &-pipes {
+    font-weight: 400;
+  }
+}
+

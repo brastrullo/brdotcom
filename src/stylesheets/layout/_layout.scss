@@ -1,0 +1,30 @@
+#app {
+  height: 100vh;
+  background-color: #f5f3ed;
+}
+
+.main-content {
+  text-align: center;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  height: 100vh;
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.footer {
+  white-space: nowrap;
+  width: 100%;
+  position: fixed;
+  bottom: 5px;
+  margin: 1em 0 0 0;
+  text-align: right;
+}

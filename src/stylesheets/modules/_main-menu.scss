@@ -1,0 +1,33 @@
+.main-nav {
+  position: fixed;
+  text-align: right;
+  right: 0;
+  top: 60px;
+  .nav {
+    display: flex;
+    flex-flow: column nowrap;
+    li {
+      margin: .75em 1em;
+      text-align: right;
+    }
+  }
+}
+
+#menu-button {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 100%;
+  height: 26px;
+  width: 20px;
+  cursor: pointer;
+  small {
+    height: 10px;
+    font-size: 8px;
+  }
+}
+
+#menu-svg {
+  stroke-width: 2;
+  stroke: #343;
+}

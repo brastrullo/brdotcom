@@ -1,0 +1,90 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>bradleyrastrullo.ca</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="app" style="display: none;">
+  <div id="backdrop"></div>
+  <header class="header">
+    <div class="logo" style="opacity: 0;">
+      <a href="" title="Home"><span class="name-bold">b<span class="name-pipes">||</span>r</span></a>
+    </div>
+    <div class="header-buttons">
+      <button name="resume" id="resumeViewer" type="button" class="resume-btn" title="View Resume">[resume]</button>
+      <button type="button" aria-haspopup="true" aria-controls="main-nav" title="Menu" name="menu" id="menu-button" class="button off intro-init-ui">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewbox="0 0 20 16">
+          <text x="0" y="0" font-size="8" font-family="sans-serif">menu</text>
+          <g id="menu-svg">
+            <path class="menu-line" d="M0 6 h 20"/>
+            <path class="menu-line" d="M0 12 h 20"/>
+            <path class="menu-line" d="M0 18 h 20"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <nav class="main-nav intro-init-ui" style="display: none;">
+    <ul class="nav" id="main-nav" role="menu">
+      <li class="li-item" role="none"><a role="menuItem" class="menu-item" href="#" id="nav-home" title="Go to Home page">Home</a></li>
+      <li class="li-item" role="none"><a role="menuItem" class="menu-item" href="#about" id="nav-about" title="Go to About page">About</a></li>
+      <li class="li-item" role="none"><a role="menuItem" class="menu-item" href="#projects" id="nav-projects" title="Go to Projects page">Projects</a></li>
+    </ul>
+  </nav>
+  <aside class="social-media-nav intro-init-ui">
+    <ul class="nav" id="social-nav">
+      <li><a class="nav-item" href="#email" title="Send me an email">email</a></li>
+      <li><a class="nav-item" href="https://github.com/brastrullo" title="See my Github profile">github</a></li>
+      <li><a class="nav-item" href="https://www.linkedin.com/in/bradleyrastrullo/" title="See my LinkedIn profile">linkedin</a></li>
+    </ul>
+  </aside>
+  <main class="main-content">
+    <section class="section-home">
+      <article>
+        <p class="intro-name">
+          <span class="name-bold">bradley</span><wbr><span class="name-thin">rastru<span class="name-pipes">||</span>o</span>
+        </p>
+        <div class="intro-block">
+          <p>Front-End Developer</p>
+          <p>Javascript | UX</p>
+        </div>
+      </article>
+    </section>
+    <section class="section-about">
+      <h1>About</h1>
+      <article class="article-about-design">
+        <p class="about-statement">Hello, I'm Bradley Rastrullo and I bring ideas to life through intuitive web apps.</p>
+        <div class="about-main">
+          <p>In my first two years of web development I worked with 2 of major banks in Canada. I come from a background that invovles a strong mix of hard technical skills and design skills.</p>
+          <p>I have always been passionate about creating and problem solving. I am a completely self-taught developer. While working in the architecture industry I discovered coding and found that my love of creating extended past the medium of "brick and mortar". I haven't looked back since.</p>
+          <p>When I'm not working on projects or reading you can usually find me on my bike in Toronto.</p>
+          <p>If you have an interesting project or just want to reach out you can contact me at <wbr>bradleyrastrullo@gmail.com</p>
+        </div>
+      </article>
+    </section>
+    </section>
+    <section class="section-projects">
+      <article>
+        <h1>Projects</h1>
+        <div class="project-template">
+          <h2>Title: Project A</h2>
+          <p>Description: asdfasdfasdf</p>
+          <p>Technologies: asdfasdfasdf</p>
+          <p>Images images images</p>
+          <p>See <a href="#project-a">demo</a></p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <small class="copyright-text">
+      &nbsp;&copy;&nbsp;2015
+      <span id="cr-year">2017</span>&nbsp;B.Rastrullo&nbsp;
+      <span class="reserved-text">ALL RIGHTS RESERVED</span>
+    </small>
+  </footer>
+  <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+  <script src="bundle.js"></script>
+</body>
+</html>

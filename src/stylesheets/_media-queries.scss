@@ -1,0 +1,30 @@
+@media (min-width: 400px) {
+  .social-media-nav {
+    width: auto;
+    right: 0;
+    margin: 0 2em 1em 0;
+
+    .nav {
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .header {
+    height: 4em;
+    .logo {
+      margin: 0 0 0 .2em;
+    }
+    #menu-button, #menu-button svg {
+      width: 2.5em;
+      height: 3.2em;
+    }
+  }
+}
+
+@media (min-width: 460px) {
+  .app {
+    // background: green;
+  }
+}

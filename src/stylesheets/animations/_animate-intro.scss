@@ -1,0 +1,45 @@
+// property name | duration | timing function | delay
+
+//VARIABLES
+$delay: .75s;
+
+.logo {
+  opacity: 0;
+}
+
+.header-logo {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 2s ease $delay;
+}
+
+.intro-name {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.intro-block {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.intro-init-ui {
+  opacity: 0;
+}
+
+.intro-anim-move-name {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 3s ease, transform .8s ease;
+}
+
+.intro-anim-move-block {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 3s ease, transform .8s ease;  
+}
+
+.intro-anim-show-ui {
+  opacity: 1;
+  transition: opacity 2s ease $delay;
+}

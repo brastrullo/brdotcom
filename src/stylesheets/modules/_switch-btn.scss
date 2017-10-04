@@ -1,0 +1,63 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 18px;
+  margin: 0 15px;
+  &:after {
+    content: "PDF";
+    position: absolute;
+    font-size: 10px;
+    top: 3px;
+    right: 4px;
+  }
+
+  input {
+    display: none;
+  }
+}
+//The slider
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: none;
+  border: 1px solid black;
+  transition: 150ms;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 1px;
+  bottom: 1px;
+  background-color: black;
+  transition: 150ms;
+  box-shadow: 0 1px 1px #8f8f8f;
+}
+
+input:checked + .slider {
+  background-color: none;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #8f8f8f;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+//Rounded sliders
+.slider.round {
+  border-radius: 18px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

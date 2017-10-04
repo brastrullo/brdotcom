@@ -1,0 +1,43 @@
+@import "variables";
+
+//TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css?family=Gudea|Roboto+Condensed|Inconsolata|Montserrat:200,400,500');
+
+//VARIABLES
+$text-shadow: 0 0 1px #343;
+$colour-text-primary: #4c4c4d;
+
+//BASE STYLES
+.app {
+  margin: 0;
+  display: block;
+  font-family: Montserrat, sans-serif;
+  color: $colour-text-primary;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+a, a:visited {
+  color: $colour-text-primary;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $colour-text-primary;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: $colour-text-primary;
+}
+
+:focus {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: 0;
+}

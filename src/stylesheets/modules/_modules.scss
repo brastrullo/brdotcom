@@ -1,0 +1,27 @@
+@import "header";
+@import "main-menu";
+@import "social-media-nav";
+@import "footer";
+@import "modal";
+@import "switch-btn";
+@import "icons/chevrons";
+
+
+.nav {
+  padding-left: 0;
+  text-align: center;
+  margin: 0 auto;
+  li {
+    display: inline-block;
+    & + li {
+      padding-left: 1em;
+    }
+  }
+}
+
+.social-media-nav {
+  color: #b0e3b8;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 4em;
+}

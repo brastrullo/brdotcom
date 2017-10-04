@@ -1,0 +1,9 @@
+.menu-item:hover {
+  text-decoration: none;
+}
+
+.end-pipe {
+  display: inline-block;
+  opacity: 0;
+  transition: transform .2s, opacity .2s;
+}
