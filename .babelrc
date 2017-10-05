@@ -5,8 +5,7 @@
         "browsers": ["last 2 versions"],
         "node": "current"
       },
-      "useBuiltIns": true,
-      "debug": true
+      "useBuiltIns": true
     }]
   ]
 }

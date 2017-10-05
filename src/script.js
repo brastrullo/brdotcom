@@ -7,6 +7,7 @@ import { downChevron } from './components/svg/scrollChevron';
 import loader from './components/importLoader';
 
 document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('script.js');
   const menuButton = document.getElementById('menu-button');
   const resumeButton = document.querySelector('#resumeViewer');
   const homeSection = document.querySelector('.section-home');
