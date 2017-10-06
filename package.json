@@ -8,11 +8,11 @@
 
     "cleancss": "cleancss -o styles.min.css styles.css",
     "uglifyjs": "uglifyjs bundle.js -o bundle.min.js",
+    "min:js": "npm run uglifyjs",
+    "min:sass": "npm run cleancss",
 
-    "build:js": "browserify src/script.js -o bundle.js",
-    "postbuild:js": "npm run uglifyjs",
+    "build:js": "browserify src/script.js -d -o bundle.js",
     "build:sass": "node-sass --source-map true src/stylesheets/styles.scss styles.css",
-    "postbuild:sass": "npm run cleancss",
 
     "watch:js": "watchify src/script.js -d -o bundle.js -v",
     "watch:sass": "nodemon -e scss -w src/stylesheets -x \"npm run build:sass\"",
@@ -22,8 +22,7 @@
     "posteslint": "npm run build:js",
 
     "publish": "run-p build:js build:sass",
-    "serve": "browser-sync start -s -f \"styles.min.css,bundle.min.js,index.html\"",
-    "prestart": "npm run publish",
+    "serve": "browser-sync start --reload-delay 100 -s -f \"styles.css,bundle.js,index.html\"",
     "start": "run-p watch serve"
   },
   "browserify": {

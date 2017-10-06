@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>bradleyrastrullo.ca</title>
-  <link rel="stylesheet" href="styles.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="app" style="display: none;">
   <div id="backdrop"></div>
   <header class="header">
     <div class="logo" style="opacity: 0;">
-      <a href="" title="Home"><span class="name-bold">b<span class="name-pipes">||</span>r</span></a>
+      <a href="" title="bradleyrastrullo.ca"><span class="name-bold">b<span class="name-pipes">||</span>r</span></a>
     </div>
     <div class="header-buttons">
-      <button name="resume" id="resumeViewer" type="button" class="resume-btn" title="View Resume">[resume]</button>
+      <a href="https://brastrullo.github.io/resume" class="resume-btn" id="resumeViewer" title="View Resume in New Tab" target="_blank">[resume]</a>
+      <!-- <button name="resume" id="resumeViewer" type="button" class="resume-btn" title="View Resume">[resume]</button> -->
       <button type="button" aria-haspopup="true" aria-controls="main-nav" title="Menu" name="menu" id="menu-button" class="button off intro-init-ui">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewbox="0 0 20 16">
           <text x="0" y="0" font-size="8" font-family="sans-serif">menu</text>
@@ -35,9 +36,9 @@
   </nav>
   <aside class="social-media-nav intro-init-ui">
     <ul class="nav" id="social-nav">
-      <li><a class="nav-item" href="#email" title="Send me an email">email</a></li>
-      <li><a class="nav-item" href="https://github.com/brastrullo" title="See my Github profile">github</a></li>
-      <li><a class="nav-item" href="https://www.linkedin.com/in/bradleyrastrullo/" title="See my LinkedIn profile">linkedin</a></li>
+      <li><a target="_blank" class="nav-item" href="#email" title="Send me an email">email</a></li>
+      <li><a target="_blank" class="nav-item" href="https://github.com/brastrullo" title="See my Github profile">github</a></li>
+      <li><a target="_blank" class="nav-item" href="https://www.linkedin.com/in/bradleyrastrullo/" title="See my LinkedIn profile">linkedin</a></li>
     </ul>
   </aside>
   <main class="main-content">
@@ -85,6 +86,6 @@
       <span class="reserved-text">ALL RIGHTS RESERVED</span>
     </small>
   </footer>
-  <script src="bundle.min.js"></script>
+  <script src="bundle.js"></script>
 </body>
 </html>

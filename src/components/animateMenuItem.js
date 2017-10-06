@@ -9,11 +9,12 @@ export default function animateMenuItem() {
   menuItems.forEach(el => el.addEventListener('mouseout', unAnimatePipe));
 
   function addPipes(el) {
-    const endPipe = elClass('div', 'end-pipe');
-    endPipe.innerHTML = '|';
+    const pipe1 = elClass('div', 'end-pipe');
     const str = el;
+
+    pipe1.innerHTML = '|';
     str.innerHTML = `${str.innerHTML.toUpperCase()} |`;
-    str.appendChild(endPipe);
+    str.appendChild(pipe1);
   }
 
   function animatePipe(e) {
@@ -25,6 +26,7 @@ export default function animateMenuItem() {
       transform: translate(${-w - spaceWidth}px);
     `;
   }
+
   function unAnimatePipe(e) {
     const w = e.target.offsetWidth;
     const pipe = this.querySelector('div');
