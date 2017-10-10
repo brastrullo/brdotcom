@@ -12,8 +12,8 @@ export default function animateMenuItem() {
     const pipe1 = elClass('div', 'end-pipe');
     const str = el;
 
-    pipe1.innerHTML = '|';
-    str.innerHTML = `${str.innerHTML.toUpperCase()} |`;
+    pipe1.innerHTML = '||';
+    str.innerHTML = `${str.innerHTML.toUpperCase()}`;
     str.appendChild(pipe1);
   }
 
@@ -21,7 +21,7 @@ export default function animateMenuItem() {
     const spaceWidth = 5;
     const w = e.target.offsetWidth;
     const pipe = this.querySelector('div');
-    pipe.style = `
+    pipe.style.cssText = `
       opacity: 1;
       transform: translate(${-w - spaceWidth}px);
     `;
@@ -30,7 +30,7 @@ export default function animateMenuItem() {
   function unAnimatePipe(e) {
     const w = e.target.offsetWidth;
     const pipe = this.querySelector('div');
-    pipe.style = `
+    pipe.style.cssText = `
       opacity: 0;
       transform: translate(0px);
     `;

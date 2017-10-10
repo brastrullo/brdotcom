@@ -1,6 +1,6 @@
 function elClass(element = 'div', classes = 0) {
   const el = document.createElement(element);
-  el.classList = classes;
+  el.classList.add(classes);
   return el;
 }
 

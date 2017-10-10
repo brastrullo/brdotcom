@@ -11,7 +11,8 @@ export default function toggleMenu() {
   button.classList.contains('off') ? showMenu() : closeMenu(); // eslint-disable-line
 
   function showMenu() {
-    button.classList = button.className.replace(/\b(off)/, 'on');
+    button.classList.remove('off');
+    button.classList.add('on');
     stagger.show();
     text.innerHTML = 'close';
     homeLink.focus();
@@ -19,7 +20,8 @@ export default function toggleMenu() {
   }
 
   function closeMenu() {
-    button.classList = button.className.replace(/\b(on)/, 'off');
+    button.classList.remove('on');
+    button.classList.add('off');
     stagger.hide();
     text.innerHTML = 'menu';
     animateMenu.close();
@@ -33,7 +35,7 @@ const stagger = (function stagger() {
 
   function staggerShow() {
     let i = 0;
-    mainNav.style = 'display: block';
+    mainNav.style.cssText = 'display: block';
     window.setTimeout(function run() {
       if (i < menuItems.length) {
         menuItems[i].classList.add('show-menu-item');
@@ -53,7 +55,7 @@ const stagger = (function stagger() {
       }
       i += 1;
     }, delay);
-    window.setTimeout(() => { mainNav.style = 'display: none'; }, delay * menuItems.length);
+    window.setTimeout(() => { mainNav.style.cssText = 'display: none'; }, delay * menuItems.length);
     clearTimeout();
   }
 

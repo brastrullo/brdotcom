@@ -1,11 +1,13 @@
 .social-media-nav {
+  font-size: 1em;
   position: fixed;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  width: auto;
   .nav {
-    text-align: center;
+    text-align: right;
     display: flex;
-    margin-bottom: 1em;
+    margin: 0 .5em 2em 0;
     flex-flow: column nowrap;
     li + li {
       padding: 0;

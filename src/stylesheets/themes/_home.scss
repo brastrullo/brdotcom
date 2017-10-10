@@ -1,11 +1,12 @@
 .section-home {
+  max-width: 800px;
   height: 100vh;
     article {
     margin-top: -5em;
   }
   .intro-name {
     text-shadow: $text-shadow;
-    font-size: 4em;
+    font-size: 6em;
     margin: .25em auto 0;
   }
   .intro-block {

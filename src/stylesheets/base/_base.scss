@@ -4,8 +4,9 @@
 @import url('https://fonts.googleapis.com/css?family=Gudea|Roboto+Condensed|Inconsolata|Montserrat:200,400,500');
 
 //VARIABLES
-$text-shadow: 0 0 1px #343;
+$text-shadow: 0 .01em .01em rgba(30,30,30,.8);
 $colour-text-primary: #4c4c4d;
+$link-text-colour: #131313;
 
 //BASE STYLES
 .app {
@@ -21,14 +22,22 @@ abbr[title] {
 
 a, a:visited {
   color: $colour-text-primary;
+  font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
   color: $colour-text-primary;
+  text-decoration: underline;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: normal;
 }
 
 h1 {
+  font-size: 2em;
   text-transform: uppercase;
   color: $colour-text-primary;
 }

@@ -8,6 +8,7 @@ function loadingScreen() {
   backdrop.insertBefore(logo(), backdrop.childNodes[0]);
 
   window.setTimeout(showLoading, 200);
+  return true;
 }
 
 function showLoading() {
@@ -27,7 +28,7 @@ function showLoading() {
   function start() {
     const backdrop = document.getElementById('backdrop');
     backdrop.remove();
-    document.body.style = 'overflow: unset';
+    document.body.style.cssText = 'overflow: unset';
   }
 
   window.setTimeout(start, 350);
