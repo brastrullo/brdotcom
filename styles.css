@@ -21,6 +21,9 @@ a:hover {
   text-decoration: none;
   font-weight: normal; }
 
+ul.nav, .resume-btn {
+  font-family: 'Roboto Condensed'; }
+
 h1 {
   font-size: 2em;
   text-transform: uppercase;
@@ -78,14 +81,10 @@ h1 {
     display: flex;
     align-items: center; }
     .header .header-buttons .resume-btn {
-      font-family: Inconsolata;
-      text-align: right;
+      text-align: center;
       margin: .5em;
       cursor: pointer;
       height: 100%; }
-      .header .header-buttons .resume-btn:hover {
-        text-shadow: 0 0.01em 0.01em rgba(30, 30, 30, 0.8);
-        text-decoration: underline; }
   .header .main-tagline {
     display: block; }
   .header .logo {
@@ -334,6 +333,7 @@ input:checked + .slider:before {
 .end-pipe {
   display: inline-block;
   opacity: 0;
+  z-index: -10;
   transition: transform .2s, opacity .2s; }
 
 .animate-downchevron {
