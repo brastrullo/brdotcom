@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   document.body.style.cssText = 'display: block';
   menuButton.focus();
   homeSection.appendChild(scrollChevron);
+  scrollChevron.classList.add('intro-init-ui');
 
   homeBtn.onclick = (e) => {
     e.preventDefault();
