@@ -8,12 +8,17 @@ import modal from './components/modal';
 import file from './components/docHandler';
 import { downChevron } from './components/svg/scrollChevron';
 import loader from './components/importLoader';
+import viewIcon from './components/svg/viewIcon';
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const menuButton = document.getElementById('menu-button');
   const homeSection = document.querySelector('.section-home');
   const homeBtn = document.getElementById('nav-home');
+  const resumeBtn = document.querySelector('.resume-btn');
   const scrollChevron = downChevron();
+  const iconSvg = viewIcon();
+
+  resumeBtn.insertBefore(iconSvg, resumeBtn.childNodes[0]);
 
   menuButton.onclick = toggleMenu;
   document.querySelector('#cr-year').innerHTML = `- ${new Date().getFullYear()}`;
