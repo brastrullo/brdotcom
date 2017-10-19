@@ -1,0 +1,68 @@
+.html-form {
+  //w - wrapper
+  $w-padding: 1em;
+  $w-width: calc(100% - (#{$w-padding} * 2));
+
+  display: flex;
+  width: $w-width;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  padding: 0 $w-padding;
+
+  .html-label {
+    text-transform: uppercase;
+  }
+
+  .html-input {
+    height: 1.25em;
+  }
+
+  .html-input, .html-textarea {
+    background: white;
+    border: 1px solid #999;
+    width: calc(100% - .5em);
+    margin: .5em auto 1.25em;
+  }
+
+  .html-textarea {
+    height: 13.5em;
+    overflow-y: auto;
+    margin-bottom: .5em;
+  }
+}
+
+.email-form-instructions {
+  margin: 0 0 .5em;
+}
+
+.validation-checkmark {
+  color: green;
+  margin-left: 1em;
+  opacity: 0;
+}
+
+.email-form-sender-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .name-label, .address-label {
+    margin-bottom: 1em;
+    // flex: .125 1 auto;
+  }
+  .email-form-name, .email-form-address {
+    max-width: 33%;
+    // flex: .5 2 auto;
+    margin: .5em 0 1.25em;
+  }
+}
+
+.email-confirmation {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+

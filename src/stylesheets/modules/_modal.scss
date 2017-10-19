@@ -13,23 +13,36 @@
 
 .modal-wrapper {
   position: fixed;
-  height: 85vh;
-  width: 75vw;
   background-color: #eee;
   z-index: 9999;
+  min-width: 16em;
+  min-height: 30em;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
 }
+
+.modal-xsmall {min-height: 10em; min-width: 16em;}
+.modal-small {max-height: 20vh; max-width: 25vw;}
+.modal-medium {
+  min-height: 28em;  min-width: 40em; 
+  height: 40vh;     width: 50vw; 
+  max-height: 35em; max-width: 40em;}
+.modal-large {height: 85vh; width: 75vw;}
 
 .modal-menu {
   display: flex;
   box-sizing: border-box;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 20px 0;
+  height: auto;
+  align-items: center;
+  align-content: center;
+  margin: 0;
   .btn {
     background: none;
     border: none;
-    margin: 0 .5em;
+    margin: 1em;
     cursor: pointer;
     &:hover {
       text-decoration: underline;
@@ -38,32 +51,28 @@
   }
 }
 
-.options-view {
-  justify-content: flex-start;
-  .doc-view {
-    margin: 0 2em;
-    width: 7em;
-    &:focus {
-      outline-offset: 0;
-    }
-  }
-  .file-type.switch {
-    margin: auto;
-  }
+.modal-h1 {
+  display: inline-block;
 }
 
-.options-actions {
-  justify-content: flex-end;
-  align-content: center;
-  .download-btn {
-    text-shadow: none;
-    color: black;
-  }
-}
-
-.resume-viewer {
+.modal-content {
+  margin: auto;
   height: 100%;
   width: 100%;
-  margin: auto;
-  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal-actions {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  margin: 1em;
+  justify-content: space-around;
+  width: 80%;
+  align-self: center;
+  bottom: 0;
+}
+
+.btn-active {
+  cursor: pointer;
 }

@@ -5,22 +5,17 @@
   "main": "./src/script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "cleancss": "cleancss -o styles.min.css styles.css",
     "uglifyjs": "uglifyjs bundle.js -o bundle.min.js",
     "min:js": "npm run uglifyjs",
     "min:sass": "npm run cleancss",
-
     "build:js": "browserify src/script.js -d -o bundle.js",
     "build:sass": "node-sass --source-map true src/stylesheets/styles.scss styles.css",
-
     "watch:js": "watchify src/script.js -d -o bundle.js -v",
     "watch:sass": "nodemon -e scss -w src/stylesheets -x \"npm run build:sass\"",
     "watch": "run-p watch:*",
-
     "eslint": "eslint src/script.js --fix",
     "posteslint": "npm run build:js",
-
     "publish": "run-p build:js build:sass",
     "serve": "browser-sync start --reload-delay 100 -s -f \"styles.css,bundle.js,index.html\"",
     "start": "run-p watch serve"
@@ -62,6 +57,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "node-mailer": "^0.1.1",
     "nodemon": "^1.12.1",
     "normalize.css": "^7.0.0",
     "npm-run-all": "^4.1.1"
