@@ -8,6 +8,7 @@ module.exports = {
 	  'no-console': 'off',
 	  'no-alert': 'off',
 	  'no-use-before-define': ['error', { 'functions': false, 'variables': false }],
-	  'no-unused-vars': 'off'
+	  'no-unused-vars': 'off',
+	  'allowTernary': true 
 	}
 };

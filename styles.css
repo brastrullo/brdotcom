@@ -22,7 +22,7 @@ a:hover {
   font-weight: normal; }
 
 ul.nav, .resume-btn {
-  font-family: 'Roboto Condensed'; }
+  font-family: 'Gudea', sans-serif; }
 
 h1 {
   font-size: 2em;
@@ -136,6 +136,8 @@ h1 {
     .social-media-nav .nav li + li {
       padding: 0;
       margin: 1em 0 0; }
+    .social-media-nav .nav li :first-child {
+      cursor: pointer; }
 
 .footer {
   color: rgba(102, 102, 102, 0.3); }
@@ -154,49 +156,120 @@ h1 {
 
 .modal-wrapper {
   position: fixed;
-  height: 85vh;
-  width: 75vw;
   background-color: #eee;
   z-index: 9999;
+  min-width: 16em;
+  min-height: 30em;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  justify-content: space-between; }
+
+.modal-xsmall {
+  min-height: 10em;
+  min-width: 16em; }
+
+.modal-small {
+  max-height: 20vh;
+  max-width: 25vw; }
+
+.modal-medium {
+  min-height: 28em;
+  min-width: 40em;
+  height: 40vh;
+  width: 50vw;
+  max-height: 35em;
+  max-width: 40em; }
+
+.modal-large {
+  height: 85vh;
+  width: 75vw; }
 
 .modal-menu {
   display: flex;
   box-sizing: border-box;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 20px 0; }
+  height: auto;
+  align-items: center;
+  align-content: center;
+  margin: 0; }
   .modal-menu .btn {
     background: none;
     border: none;
-    margin: 0 .5em;
+    margin: 1em;
     cursor: pointer; }
     .modal-menu .btn:hover {
       text-decoration: underline;
       text-shadow: 0 1px 0 #2e2e2e; }
 
-.options-view {
-  justify-content: flex-start; }
-  .options-view .doc-view {
-    margin: 0 2em;
-    width: 7em; }
-    .options-view .doc-view:focus {
-      outline-offset: 0; }
-  .options-view .file-type.switch {
-    margin: auto; }
+.modal-h1 {
+  display: inline-block; }
 
-.options-actions {
-  justify-content: flex-end;
-  align-content: center; }
-  .options-actions .download-btn {
-    text-shadow: none;
-    color: black; }
-
-.resume-viewer {
+.modal-content {
+  margin: auto;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.modal-actions {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  margin: 1em;
+  justify-content: space-around;
+  width: 80%;
+  align-self: center;
+  bottom: 0; }
+
+.btn-active {
+  cursor: pointer; }
+
+.html-form {
+  display: flex;
+  width: calc(100% - (1em * 2));
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
   margin: auto;
-  border: none; }
+  padding: 0 1em; }
+  .html-form .html-label {
+    text-transform: uppercase; }
+  .html-form .html-input {
+    height: 1.25em; }
+  .html-form .html-input, .html-form .html-textarea {
+    background: white;
+    border: 1px solid #999;
+    width: calc(100% - .5em);
+    margin: .5em auto 1.25em; }
+  .html-form .html-textarea {
+    height: 13.5em;
+    overflow-y: auto;
+    margin-bottom: .5em; }
+
+.email-form-instructions {
+  margin: 0 0 .5em; }
+
+.validation-checkmark {
+  color: green;
+  margin-left: 1em;
+  opacity: 0; }
+
+.email-form-sender-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .email-form-sender-wrapper .name-label, .email-form-sender-wrapper .address-label {
+    margin-bottom: 1em; }
+  .email-form-sender-wrapper .email-form-name, .email-form-sender-wrapper .email-form-address {
+    max-width: 33%;
+    margin: .5em 0 1.25em; }
+
+.email-confirmation {
+  display: inline-block;
+  width: 100%;
+  text-align: center; }
 
 .switch {
   position: relative;
@@ -331,6 +404,8 @@ input:checked + .slider:before {
   text-decoration: none; }
 
 .end-pipe {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.1em;
   display: inline-block;
   opacity: 0;
   z-index: -10;
@@ -362,10 +437,28 @@ input:checked + .slider:before {
     .header .logo {
       margin: 0 0 0 .2em; }
     .header #menu-button, .header #menu-button svg {
-      width: 2em;
-      height: 2.5em; }
+      width: 1.5em;
+      height: 2em; }
   .section-home .intro-name {
     font-size: 4em; } }
+
+@media (max-width: 700px) {
+  .modal-medium {
+    height: 80vh;
+    width: 70vw;
+    min-width: 16em; }
+    .modal-medium .email-form-sender-wrapper {
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      width: 100%; }
+      .modal-medium .email-form-sender-wrapper .email-form-name, .modal-medium .email-form-sender-wrapper .email-form-address {
+        max-width: 100%; }
+    .modal-medium .html-label {
+      margin: 0; }
+    .modal-medium .html-input {
+      width: 100%; } }
 
 .hidden {
   display: none;
