@@ -2,7 +2,6 @@ import file from './docHandler';
 import viewHandler from './viewHandler';
 import { elClass, makeBtn } from '../utils';
 
-
 const modal = (function modal() {
   let contentInput;
   const options = {};

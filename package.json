@@ -17,8 +17,11 @@
     "eslint": "eslint src/script.js --fix",
     "posteslint": "npm run build:js",
     "publish": "run-p build:js build:sass",
-    "serve": "browser-sync start --reload-delay 100 -s -f \"styles.css,bundle.js,index.html\"",
+    "serve": "browser-sync start --cors --reload-delay 100 -s -f \"styles.css,bundle.js,index.html\"",
     "start": "run-p watch serve"
+  },
+  "express": {
+    "target": "node"
   },
   "browserify": {
     "transform": [
@@ -40,26 +43,29 @@
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-preset-env": "^1.6.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
     "clean-css-cli": "^4.1.10",
-    "eslint": "^4.8.0",
-    "eslint-config-airbnb-base": "^12.0.1",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "node-sass": "^4.5.3",
-    "uglify-js": "^3.1.3",
+    "uglify-js": "^3.1.4",
     "velocity-animate": "^1.5.0",
     "watchify": "^3.9.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "node-mailer": "^0.1.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "nodemailer": "^4.2.0",
     "nodemon": "^1.12.1",
     "normalize.css": "^7.0.0",
+    "npm": "^5.5.1",
     "npm-run-all": "^4.1.1"
   }
 }

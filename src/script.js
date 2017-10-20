@@ -4,7 +4,6 @@
 
 import 'babel-polyfill';
 import toggleMenu from './components/toggleMenu';
-import file from './components/docHandler';
 import { downChevron } from './components/svg/scrollChevron';
 import loader from './components/importLoader';
 import viewIcon from './components/svg/viewIcon';
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   emailBtn.onclick = emailModal;
   menuButton.onclick = toggleMenu;
   document.querySelector('#cr-year').innerHTML = `- ${new Date().getFullYear()}`;
-
   loader();
   document.body.style.cssText = 'display: block';
   menuButton.focus();

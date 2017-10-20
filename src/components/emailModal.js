@@ -1,5 +1,6 @@
 import modal from './modal';
-import mailer from './emailHandler';
+import emailHandler from './emailHandler';
+import mailer from '../mailer';
 import { elClass, makeBtn } from '../utils';
 import confirm from './emailPostModal';
 
@@ -50,7 +51,8 @@ export default function emailModal() {
     };
 
     form.setAttribute('id', 'emailForm');
-    form.action = '#';
+    form.action = '/mailer';
+    form.onsubmit = false;
     form.setAttribute('method', 'POST');
     p.innerHTML = 'Please enter valid email address and message.';
     checkmark.innerHTML = '&#10003';
@@ -104,8 +106,11 @@ export default function emailModal() {
   }());
 
   function sendEmail() {
+    const form = document.querySelector('.html-form.email-form');
     console.log('*Email Sent');
-    mailer.set();
+    emailHandler.set();
+    mailer();
+    // form.submit(false);
     modal.close();
     modal.set(confirm());
     modal.open();
