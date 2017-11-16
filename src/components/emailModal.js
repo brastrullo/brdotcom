@@ -51,8 +51,6 @@ export default function emailModal() {
     };
 
     form.setAttribute('id', 'emailForm');
-    form.action = '/mailer';
-    form.onsubmit = false;
     form.setAttribute('method', 'POST');
     p.innerHTML = 'Please enter valid email address and message.';
     checkmark.innerHTML = '&#10003';
@@ -110,7 +108,6 @@ export default function emailModal() {
     console.log('*Email Sent');
     emailHandler.set();
     mailer();
-    // form.submit(false);
     modal.close();
     modal.set(confirm());
     modal.open();

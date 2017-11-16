@@ -367,6 +367,12 @@ input:checked + .slider:before {
 .name-pipes {
   font-weight: 400; }
 
+.section-about {
+  text-align: left;
+  align-items: flex-start; }
+  .section-about h1 {
+    margin: 0 .75em; }
+
 .logo {
   opacity: 0; }
 
