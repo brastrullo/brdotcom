@@ -18,9 +18,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const scrollChevron = downChevron();
   const iconSvg = viewIcon();
 
+
   resumeBtn.insertBefore(iconSvg, resumeBtn.childNodes[0]);
 
-  emailBtn.onclick = emailModal;
+  // emailBtn.onclick = emailModal;
   menuButton.onclick = toggleMenu;
   document.querySelector('#cr-year').innerHTML = `- ${new Date().getFullYear()}`;
   loader();

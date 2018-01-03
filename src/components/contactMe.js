@@ -3,7 +3,7 @@ export default function contactMe() {
     <section class="section-contact">
       <h1>Contact</h1>
       <article class="article-contact">
-        <p>Now it's your turn. Please complete form:</p>
+        <p>Please complete form:</p>
         <form action="">
           <p>I am a
             <select id="job-title">

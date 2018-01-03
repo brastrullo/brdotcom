@@ -11,13 +11,13 @@
     "min:sass": "npm run cleancss",
     "build:js": "browserify src/script.js -d -o bundle.js",
     "build:sass": "node-sass --source-map true src/stylesheets/styles.scss styles.css",
-    "watch:js": "watchify src/script.js -d -o bundle.js -v",
+    "watch:js": "nodemon -e js -w src/script.js -x \"npm run build:js\"",
     "watch:sass": "nodemon -e scss -w src/stylesheets -x \"npm run build:sass\"",
     "watch": "run-p watch:*",
     "eslint": "eslint src/script.js --fix",
     "posteslint": "npm run build:js",
     "publish": "run-p build:js build:sass",
-    "serve": "browser-sync start --cors --reload-delay 100 -s -f \"styles.css,bundle.js,index.html\"",
+    "serve": "nodemon ./server.js",
     "start": "run-p watch serve"
   },
   "express": {
@@ -43,29 +43,29 @@
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.1",
+    "babel-eslint": "^8.1.2",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^7.3.0",
-    "browser-sync": "^2.18.13",
-    "browserify": "^14.4.0",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.23.2",
+    "browserify": "^14.5.0",
     "clean-css-cli": "^4.1.10",
-    "eslint": "^4.9.0",
+    "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "node-sass": "^4.5.3",
-    "uglify-js": "^3.1.4",
+    "node-sass": "^4.7.2",
+    "uglify-js": "^3.3.4",
     "velocity-animate": "^1.5.0",
     "watchify": "^3.9.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
-    "nodemailer": "^4.2.0",
-    "nodemon": "^1.12.1",
+    "nodemailer": "^4.4.1",
+    "nodemon": "^1.14.7",
     "normalize.css": "^7.0.0",
-    "npm": "^5.5.1",
-    "npm-run-all": "^4.1.1"
+    "npm": "^5.6.0",
+    "npm-run-all": "^4.1.2"
   }
 }

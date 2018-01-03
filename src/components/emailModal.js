@@ -32,9 +32,9 @@ export default function emailModal() {
       const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       let errorMsg = '';
       let requiredValid = 0;
-      if (!regex.test(email.value)) {errorMsg += '- Please enter valid email. \n'}
-      if (content.value.length === 0) {errorMsg += '- Please add message. \n'}
-      if (email.value.length > 0 && content.value.length > 0) {requiredValid = 1;}
+      if (!regex.test(email.value)) { errorMsg += '- Please enter valid email. \n' }
+      if (content.value.length === 0) { errorMsg += '- Please add message. \n' }
+      if (email.value.length > 0 && content.value.length > 0) { requiredValid = 1; }
 
       errorMsg ? logMsg() : valid();
 
@@ -46,12 +46,13 @@ export default function emailModal() {
       function valid() {
         console.log('No errors');
         sendEmail();
-        return;
+        return false;
       }
     };
 
     form.setAttribute('id', 'emailForm');
     form.setAttribute('method', 'POST');
+    form.setAttribute('action', '/mailer');
     p.innerHTML = 'Please enter valid email address and message.';
     checkmark.innerHTML = '&#10003';
     p.appendChild(checkmark);
@@ -86,31 +87,48 @@ export default function emailModal() {
     form.appendChild(content);
     form.appendChild(submitBtn);
 
+    // just for testing please delete below
+    email.setAttribute('value', 'brastrullo@gmail.com');
+    content.value = 'asdf';
+    console.log('logging:', email.value, content.value);
+    // just for testing please delete above
+
     email.addEventListener('keyup', validateInput);
     content.addEventListener('keyup', validateInput);
     modal.set(form);
     modal.options(options);
     modal.open();
 
+
     function validateInput() {
-        const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (regex.test(email.value) && content.value.length > 0) {
-          checkmark.style.opacity = 1;
-        } else {
-          checkmark.style.opacity = 0;
-          console.log(regex.test(email.value), (content.value.length > 0));
+      const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (regex.test(email.value) && content.value.length > 0) {
+        checkmark.style.opacity = 1;
+      } else {
+        checkmark.style.opacity = 0;
+        console.log(regex.test(email.value), (content.value.length > 0));
       }
     }
   }());
 
   function sendEmail() {
     const form = document.querySelector('.html-form.email-form');
-    console.log('*Email Sent');
     emailHandler.set();
-    mailer();
+    console.log(emailHandler.get());
+
+    fetch('/mailer', {
+      method: 'post',
+      type: 'cors',
+      body: JSON.parse(emailHandler.get()),
+    });
+
+    form.submit((e) => {
+      e.preventDefault();
+      // mailer();
+      return false;
+    });
     modal.close();
     modal.set(confirm());
     modal.open();
   }
 }
-
