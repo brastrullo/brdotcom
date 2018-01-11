@@ -4,7 +4,7 @@ import dimUI from './dimUI';
 import introAnimation from './introAnimation';
 
 export default function loader() {
-  // loadingScreen();
+  loadingScreen();
   animateMenuItems();
   introAnimation();
   dimUI();
