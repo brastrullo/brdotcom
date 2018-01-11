@@ -1,7 +1,7 @@
 @import "variables";
 
 //TYPOGRAPHY
-@import url('https://fonts.googleapis.com/css?family=Gudea|Roboto+Condensed|Inconsolata|Montserrat:200,400,500');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,500');
 
 //VARIABLES
 $text-shadow: 0 .01em .01em rgba(30,30,30,.8);
@@ -36,9 +36,9 @@ a:hover {
   font-weight: normal;
 }
 
-ul.nav, .resume-btn {
-  font-family: 'Gudea', sans-serif;
-}
+// ul.nav, .resume-btn {
+//   font-family: 'Gudea', sans-serif;
+// }
 
 h1 {
   font-size: 2em;
