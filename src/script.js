@@ -7,7 +7,7 @@ import toggleMenu from './components/toggleMenu';
 import { downChevron } from './components/svg/scrollChevron';
 import loader from './components/importLoader';
 import viewIcon from './components/svg/viewIcon';
-import emailModal from './components/emailModal';
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const menuButton = document.getElementById('menu-button');
@@ -18,8 +18,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const scrollChevron = downChevron();
   const iconSvg = viewIcon();
 
-
   resumeBtn.insertBefore(iconSvg, resumeBtn.childNodes[0]);
+
+  window.setTimeout(start, 450);
+  window.scrollTo(0, 0);
 
   // emailBtn.onclick = emailModal;
   menuButton.onclick = toggleMenu;
@@ -45,6 +47,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   NodeList.prototype.forEach = Array.prototype.forEach;
   return true;
 }()); // forEach
+
+function start() {
+  const backdrop = document.getElementById('backdrop');
+  backdrop.remove();
+}
 
 function removeHashUrl() {
   const loc = window.location;

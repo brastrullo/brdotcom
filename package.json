@@ -15,7 +15,7 @@
     "watch:sass": "nodemon -e scss -w src/stylesheets -x \"npm run build:sass\"",
     "watch": "run-p watch:*",
     "eslint": "eslint src/script.js --fix",
-    "minify": "run-p min:*",
+    "minify": "run-p build:* min:*",
     "posteslint": "npm run build:js",
     "publish": "run-p build:js build:sass",
     "serve": "nodemon ./server.js",

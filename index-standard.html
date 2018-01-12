@@ -6,8 +6,65 @@
   <title>bradleyrastrullo.ca</title>
   <link rel="stylesheet" href="styles.min.css">
 </head>
-<body class="app" style="display: none;">
-  <div id="backdrop"></div>
+<body class="app">
+  <div id="backdrop">
+      <svg xmlns='http://www.w3.org/2000/svg' class='svg-logo' width='200' height='200' viewbox='0 0 500 500'>
+        <g>
+          <text x='110' y='250' font-family='Helvetica' font-size='180' fill='rgba(30, 30, 30, .8)'>
+            b||r
+          </text>
+          <path id='loadingBar' d='M90 330 h 320' stroke-width=20 stroke='rgba(230, 230, 230, .8)' />
+        </g>
+      </svg>
+      <style>
+        #backdrop {
+          height: 100vh;
+          width: 100vw;
+          display: flex;    
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          z-index: 9000;
+          animation: .25s hideBackdrop .75s linear forwards;
+
+        }
+
+        .svg-logo {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: auto;
+          color: #333;
+          font-size: 10em;
+        }
+
+        #loadingBar {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: load .75s ease-out forwards;
+        }
+
+        @keyframes load {
+          to { stroke-dashoffset: 0; }
+        }
+
+        @keyframes hideBackdrop {
+          to { opacity: 0; }
+        }
+      </style>
+  <script>
+    const backdrop = document.getElementById('backdrop');
+    backdrop.style.background = pastelColors();
+
+    function pastelColors() {
+      const r = (Math.round(Math.random() * 127) + 127).toString(16);
+      const g = (Math.round(Math.random() * 127) + 127).toString(16);
+      const b = (Math.round(Math.random() * 127) + 127).toString(16);
+      return `#${r}${g}${b}`;
+    }
+  </script>
+  </div>
   <header class="header">
     <div class="logo" style="opacity: 0;">
       <a href="" title="bradleyrastrullo.ca"><span class="name-bold">b<span class="name-pipes">||</span>r</span></a>
@@ -57,8 +114,8 @@
       <article class="article-about-design">
         <p class="about-statement">Hello, I'm Bradley Rastrullo and I bring ideas to life through intuitive web apps.</p>
         <div class="about-main">
-          <p>I am always looking out for more collaborations. If you have an interesting project or just want to reach out you can contact me at <a href="mailto:bradleyrastrullo@gmail.com" target="_blank">bradleyrastrullo@gmail.com</a><wbr> or <span class="vcard mobile-only"><a href="tel:6473891342" class="tel" style="white-space: nowrap;">(647)389-1342</a></span</p>
-          <p>My site is custom made with plain javascript and is currently under open redesign. Projects and more animations coming soon. If you want to look under the hood, check out the <a href="https://github.com/brastrullo/brdotca" title="Visit my repo on Github">brdotca</a> repo on github.</p>
+          <p>I am always looking out for more collaborations. If you have an interesting project or just want to reach out you can contact me at <a href="mailto:bradleyrastrullo@gmail.com" target="_blank" title="Send me an email">bradleyrastrullo@gmail.com</a><wbr> or <span class="vcard mobile-only"><a href="tel:6473891342" class="tel" style="white-space: nowrap;" title="Call Brad">(647)389-1342</a></span</p>
+          <p>My site is custom made with plain javascript and is currently under open redesign. Projects and more animations coming soon. If you want to look under the hood, check out the <a href="https://github.com/brastrullo/brdotca" target="_blank" title="Visit my repo on Github">brdotca</a> repo on github.</p>
         </div>
       </article>
     </section>
