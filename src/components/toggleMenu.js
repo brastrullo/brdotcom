@@ -73,11 +73,13 @@ const animateMenu = (function animateMenu() {
 
   function animateOpenBtn() {
     const topSeq = [
-      { e: b1, p: { translateY: 6 }, o: { duration: '100ms' } },
+      { e: b1, p: { translateY: 6 }, o: { duration: '0ms' } },
+      { e: b1, p: { translateX: -2 }, o: { duration: '0ms' } },
       { e: b1, p: { rotateZ: 45 }, o: { duration: '100ms' } },
     ];
     const bottomSeq = [
-      { e: b3, p: { translateY: -6 }, o: { duration: '100ms' } },
+      { e: b3, p: { translateX: -8 }, o: { duration: '0ms' } },
+      { e: b3, p: { translateY: -2 }, o: { duration: '0ms' } },
       { e: b3, p: { rotateZ: -45 }, o: { duration: '100ms' } },
     ];
 
@@ -91,10 +93,12 @@ const animateMenu = (function animateMenu() {
   function animateCloseBtn() {
     const topLine = [
       { e: b1, p: { rotateZ: 0 }, o: { duration: '100ms' } },
-      { e: b1, p: { translateY: 0 }, o: { duration: '100ms' } },
+      { e: b1, p: { translateY: 0 }, o: { duration: '0ms' } },
+      { e: b1, p: { translateX: 0 }, o: { duration: '100ms' } },
     ];
     const bottomLine = [
       { e: b3, p: { rotateZ: 0 }, o: { duration: '100ms' } },
+      { e: b3, p: { translateX: 0 }, o: { duration: '0ms' } },
       { e: b3, p: { translateY: 0 }, o: { duration: '100ms' } },
     ];
 

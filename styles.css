@@ -75,7 +75,8 @@ h1 {
   justify-content: space-between; }
   .header .header-buttons {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin-right: 1em; }
     .header .header-buttons .resume-btn {
       text-align: center;
       margin: .5em;
@@ -93,7 +94,7 @@ h1 {
 .main-nav {
   position: fixed;
   text-align: right;
-  right: 0;
+  right: 1em;
   top: 60px; }
   .main-nav .nav {
     display: flex;
