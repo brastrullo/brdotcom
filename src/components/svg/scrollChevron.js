@@ -19,6 +19,10 @@ function downChevron() {
       <path class="animate-downchevron" stroke-width="1" fill="none" d="M2 7 L 15 15 L 28 7"/>
     </svg>
   `;
+  const scrolldownFn = () => document.querySelector('.section-about').scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+  button.onclick = scrolldownFn
   return button;
 }
 

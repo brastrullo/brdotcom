@@ -353,7 +353,8 @@ input:checked + .slider:before {
         font-size: .75em; }
   .section-home .scrolldown {
     position: absolute;
-    bottom: 10px; }
+    bottom: 10px;
+    cursor: pointer; }
 
 .name-bold {
   font-weight: 500; }
@@ -462,6 +463,9 @@ input:checked + .slider:before {
       margin: 0; }
     .modal-medium .html-input {
       width: 100%; } }
+
+html {
+  scroll-behavior: smooth; }
 
 .hidden {
   display: none;

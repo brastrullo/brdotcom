@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const menuButton = document.getElementById('menu-button');
   const homeSection = document.querySelector('.section-home');
   const homeBtn = document.getElementById('nav-home');
+  const aboutBtn = document.getElementById('nav-about');
   const resumeBtn = document.querySelector('.resume-btn');
   const emailBtn = document.querySelector('.email-btn');
   const scrollChevron = downChevron();
@@ -34,10 +35,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   homeBtn.onclick = (e) => {
     e.preventDefault();
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
     removeHashUrl();
     return false;
   };
+
+  aboutBtn.onclick = (e) => {
+    e.preventDefault();
+    document.querySelector('.section-about').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+    removeHashUrl();
+    return false;
+  }
+
   return event;
 });
 

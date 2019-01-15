@@ -5,6 +5,10 @@
 @import "animations/animations";
 @import "media-queries";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hidden {
   display: none;
   visibility: hidden;
