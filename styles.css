@@ -139,7 +139,7 @@ h1 {
 
 .footer {
   color: rgba(102, 102, 102, 0.1);
-  font-size: 1em; }
+  font-size: .75em; }
 
 .modal-background {
   position: fixed;
