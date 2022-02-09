@@ -55,7 +55,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.9",
     "uglify-js": "^3.4.9",
     "velocity-animate": "^1.5.2",
